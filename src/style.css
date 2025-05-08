@@ -1,0 +1,148 @@
+:root {
+  --bg: #f5f7fa;
+  --text: #1e1e1e;
+  --card: white;
+  --accent: #2A7BE4;
+  --highlight: #21C074;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f5f5f5;
+  --card: #2a2a2a;
+  --accent: #5da7ff;
+  --highlight: #4dde9c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav a.active {
+  background: var(--highlight);
+}
+
+main {
+  padding: 30px 20px;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section {
+  background: var(--card);
+  padding: 25px;
+  max-width: 850px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+section:hover {
+  transform: scale(1.01);
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #777;
+  background: #eef1f5;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
