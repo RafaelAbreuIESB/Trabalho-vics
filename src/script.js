@@ -36,7 +36,10 @@ const pages = {
   sobre: `
     <section>
       <h2>Quem Somos</h2>
-      <p>Vitaconect é um dispositivo que monitora sinais vitais e avisa a UBS mais próxima sobre alterações. Em caso de emergência, a unidade envia uma ambulância (unidade de atendimento móvel).</p>
+      <p>Somos um grupo de estudantes de enfermagem da univerdade IESB, que através desse projeto de extensão, almejam a melhora na saúde coletiva, em especial, em situações de emergência. 
+      </p>
+      <P> Vitória Christina Silva Lopes - 2412220036 <br> Ana Beatriz Carvalho - 2512220063 <br> Maria Elys Everton Freire - 2512220056 <br> Natália Bomfim Lopes - 2422220039 <br> Janenkassia Magalhães Dos Santos - 2422220010
+      </p>
     </section>
   `,
   publico: `
@@ -54,7 +57,7 @@ const pages = {
   contato: `
     <section>
       <h2>Contato</h2>
-      <p>Envie um e-mail para <a href="mailto:seugmail@gmail.com">seugmail@gmail.com</a> para saber mais.</p>
+      <p>Envie um e-mail para <a href="mailto:vitaconectpopular@gmail.com">vitaconectpopular@gmail.com</a> para saber mais.</p>
     </section>
   `
 };
