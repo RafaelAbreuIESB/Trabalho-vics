@@ -50,18 +50,33 @@ const pages = {
     </section>
   `,
   cadastro: `
-    <section>
-      <h2>Como se cadastrar?</h2>
-      <p>Não precisa detalhar muito. Pode ser algo simples — apenas informar os dados básicos para o contato.</p>
-    </section>
-  `,
-  contato: `
+  <section>
+    <h2>Como se cadastrar?</h2>
+
+    <form id="cadastro-form" class="form-box">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">Cadastro enviado com sucesso!</p>
+  </section>
+`,
+contato: `
   <section class="hero">
     <h2>Contato</h2>
     <p>Envie um e-mail para <a href="mailto:vitaconectpopular@gmail.com">vitaconectpopular@gmail.com</a> para saber mais.</p>
     <img src="img/Ft2.jpg" class="hero-png" />
   </section>
   `
+
 };
 
 function loadPage(page) {
@@ -86,4 +101,21 @@ navLinks.forEach(link => {
     const page = e.target.dataset.page;
     loadPage(page);
   });
+});
+
+document.addEventListener("submit", function(e) {
+  if (e.target && e.target.id === "cadastro-form") {
+    e.preventDefault();
+
+    // Aqui você poderia enviar para um backend (ex: via fetch)
+    const form = e.target;
+    const msg = document.getElementById("mensagem-sucesso");
+
+    form.reset();
+    msg.style.display = "block";
+
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 3000);
+  }
 });
