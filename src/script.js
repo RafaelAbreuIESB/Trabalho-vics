@@ -28,10 +28,11 @@ applyTheme(localStorage.getItem('theme') || 'light');
 // Conteúdo das páginas
 const pages = {
   home: `
-    <section>
-      <h2>O que é o Vitaconect?</h2>
-      <p>Vitaconect é um dispositivo gratuito que monitora sinais vitais em tempo real. Ele é ideal para famílias de baixa renda e se conecta com a UBS mais próxima para acionar atendimento médico automaticamente em emergências.</p>
-    </section>
+    <section class="hero">
+    <h2>O que é o Vitaconect?</h2>
+    <p>Vitaconect é um dispositivo gratuito que monitora sinais vitais em tempo real. Ele é ideal para famílias de baixa renda e se conecta com a UBS mais próxima para acionar atendimento médico automaticamente em emergências.</p>
+    <img src="img/Ft1.jpg" class="hero-png" />
+  </section>
   `,
   sobre: `
     <section>
@@ -55,10 +56,11 @@ const pages = {
     </section>
   `,
   contato: `
-    <section>
-      <h2>Contato</h2>
-      <p>Envie um e-mail para <a href="mailto:vitaconectpopular@gmail.com">vitaconectpopular@gmail.com</a> para saber mais.</p>
-    </section>
+  <section class="hero">
+    <h2>Contato</h2>
+    <p>Envie um e-mail para <a href="mailto:vitaconectpopular@gmail.com">vitaconectpopular@gmail.com</a> para saber mais.</p>
+    <img src="img/Ft2.jpg" class="hero-png" />
+  </section>
   `
 };
 
